@@ -122,6 +122,7 @@ void lc_Sampledlg::processAction(Document_Interface *doc)
     end.setY(endyedit->text().toDouble());
 
     doc->addLine(&start, &end);
+    writeSettings();
 }
 
 void lc_Sampledlg::checkAccept()

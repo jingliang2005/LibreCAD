@@ -1,0 +1,3 @@
+[submodule "plugins/LibreCAM"]
+	path = plugins/LibreCAM
+	url = git@github.com:jingliang2005/LibreCAM.git
