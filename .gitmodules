@@ -1,3 +1,6 @@
 [submodule "plugins/LibreCAM"]
 	path = plugins/LibreCAM
 	url = git@github.com:jingliang2005/LibreCAM.git
+[submodule "plugins/LibreNestTools"]
+	path = plugins/LibreNestTools
+	url = ssh://git@www.anzhenghe.com:10022/anzhenghe/librecadnesttools.git

@@ -20,7 +20,9 @@ SUBDIRS     = \
         picfile \
         plotequation \
         gear \
-        LibreCAM
+        LibreCAM \
+        LibreNestTools
+
 
 TRANSLATIONS = ./ts/plugins_ar.ts \
     ./ts/plugins_ca.ts \

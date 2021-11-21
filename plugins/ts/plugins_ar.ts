@@ -11,6 +11,274 @@
     </message>
 </context>
 <context>
+    <name>CAMProfileDataModel</name>
+    <message>
+        <location filename="../LibreCAM/profile/src/camprofiledata.cpp" line="145"/>
+        <source>Name</source>
+        <translation type="unfinished">اسم</translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/src/camprofiledata.cpp" line="147"/>
+        <source>Tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/src/camprofiledata.cpp" line="149"/>
+        <source>Tool No:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/src/camprofiledata.cpp" line="151"/>
+        <source>FeedRate</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileSettings</name>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="14"/>
+        <source>Profile Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="31"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Name:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="44"/>
+        <source>Find Profile Operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="65"/>
+        <source>Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="89"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Savety margin:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="114"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="160"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="206"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="252"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="323"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="428"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="474"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="545"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="591"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="665"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="711"/>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="138"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Z Retract:&lt;/ps&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="184"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Target Depth:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="230"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Depth Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="277"/>
+        <source>Spindle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="301"/>
+        <source>&lt;p align=&quot;right&quot;&gt;RPM:&lt;/ps&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="347"/>
+        <source>CW</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="357"/>
+        <source>CCW</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="382"/>
+        <source>Cutter Compensation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="406"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Tool Diam:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="452"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Tool No:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="499"/>
+        <source>Feed Rates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="523"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Cut:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="569"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Plunge:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="616"/>
+        <source>Optional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="643"/>
+        <source>&lt;p align=&quot;right&quot;&gt;First Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="689"/>
+        <source>&lt;p align=&quot;right&quot;&gt;Last Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="751"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="754"/>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="770"/>
+        <source>Alt+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettings.ui" line="767"/>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileSettingsList</name>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettingslist.ui" line="14"/>
+        <source>Edit/add/select Profile Preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettingslist.ui" line="41"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettingslist.ui" line="48"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilesettingslist.ui" line="55"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileWidget</name>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="26"/>
+        <source>Moves selected entities to profile layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="29"/>
+        <source>Move to Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="43"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="56"/>
+        <source>Select profile preferences from the profile database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="59"/>
+        <source>Select Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="66"/>
+        <source>Change the profile preferences for this profile layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="69"/>
+        <source>Modify Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="83"/>
+        <source>Change to profile modify mode. A mode where you can change the direction and location of the path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="86"/>
+        <source>Modify Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="100"/>
+        <source>When enabled the g-code will be saved to file, when un-checked and configured you can send it straight to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="103"/>
+        <source>Save to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="110"/>
+        <source>Send g-code straight to EMC, or save to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="113"/>
+        <source>Send all to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="120"/>
+        <source>Generate G-Code only for selected items, this will be saved or send to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/profile/ui/camprofilewidget.ui" line="123"/>
+        <source>Send selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ImportShp</name>
     <message>
         <location filename="../importshp/importshp.cpp" line="40"/>
@@ -1176,8 +1444,46 @@ anti-clockwise.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sample/sample.cpp" line="132"/>
+        <location filename="../sample/sample.cpp" line="133"/>
         <source>Sample plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>librecam</name>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="39"/>
+        <source>rvt - Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="46"/>
+        <source>RVT-CAM/Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="47"/>
+        <location filename="../LibreCAM/librecam.cpp" line="48"/>
+        <source>RVT-CAM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="47"/>
+        <location filename="../LibreCAM/librecam.cpp" line="59"/>
+        <location filename="../LibreCAM/librecam.cpp" line="79"/>
+        <source>Profile Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="48"/>
+        <location filename="../LibreCAM/librecam.cpp" line="66"/>
+        <source>Machine Setup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../LibreCAM/librecam.cpp" line="46"/>
+        <location filename="../LibreCAM/librecam.cpp" line="61"/>
+        <source>Profile Preference</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

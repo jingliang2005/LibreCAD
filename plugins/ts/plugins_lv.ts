@@ -9,6 +9,214 @@
     </message>
 </context>
 <context>
+    <name>CAMProfileDataModel</name>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nosaukums</translation>
+    </message>
+    <message>
+        <source>Tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tool No:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FeedRate</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileSettings</name>
+    <message>
+        <source>Profile Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Name:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Find Profile Operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Savety margin:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Z Retract:&lt;/ps&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Target Depth:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Depth Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spindle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;RPM:&lt;/ps&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CW</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CCW</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cutter Compensation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Tool Diam:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Tool No:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Feed Rates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Cut:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Plunge:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;First Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p align=&quot;right&quot;&gt;Last Increment:&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alt+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileSettingsList</name>
+    <message>
+        <source>Edit/add/select Profile Preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CAMProfileWidget</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Moves selected entities to profile layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move to Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select profile preferences from the profile database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change the profile preferences for this profile layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modify Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change to profile modify mode. A mode where you can change the direction and location of the path.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modify Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When enabled the g-code will be saved to file, when un-checked and configured you can send it straight to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send g-code straight to EMC, or save to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send all to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Generate G-Code only for selected items, this will be saved or send to EMC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ImportShp</name>
     <message>
         <source>Import ESRI Shapefile</source>
@@ -951,6 +1159,33 @@ anti-clockwise.</source>
     <message>
         <source>Sample plugin</source>
         <translation>Parauga spraudnis</translation>
+    </message>
+</context>
+<context>
+    <name>librecam</name>
+    <message>
+        <source>rvt - Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RVT-CAM/Profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RVT-CAM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profile Preference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Profile Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Machine Setup</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

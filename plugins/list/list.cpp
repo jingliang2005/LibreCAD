@@ -38,7 +38,7 @@ void LC_List::execComm(Document_Interface *doc,
     Q_UNUSED(cmd);
     d = doc;
     QList<Plug_Entity *> obj;
-    bool yes  = doc->getSelect(&obj);
+    bool yes  = doc->getSelect(&obj);//->getAllEntities(&obj);//->getSelect(&obj);
     if (!yes || obj.isEmpty()) return;
 
     QString text;
