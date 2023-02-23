@@ -136,7 +136,7 @@ win32 {
     exists( "$$(BOOST_DIR)" ) {			# Is it set in the environment?
         BOOST_DIR = "$$(BOOST_DIR)"		# Yes, use
     } else:isEmpty( BOOST_DIR ) {		# Is it set in custom.pro?
-        BOOST_DIR = "C:/Libs/boost1770/include/boost-1_77"	# No, hardcode
+        BOOST_DIR = "C:/Boost/include/boost-1_81"	# No, hardcode
     }
 
     !exists( "$${BOOST_DIR}/boost/version.hpp" ) {
