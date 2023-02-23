@@ -122,6 +122,8 @@ QString RS_FilterDXFRW::lastError() const
         return (QObject::tr( "error reading DXF/DWG objects", "RS_FilterDXFRW"));
     case DRW::BAD_READ_SECTION:
         return (QObject::tr( "error reading DXF/DWG sections", "RS_FilterDXFRW"));
+    case DRW::BAD_CODE_PARSED:
+        return (QObject::tr( "error reading DXF/DWG code", "RS_FilterDXFRW"));
     default:
         break;
     }
@@ -166,7 +168,7 @@ bool RS_FilterDXFRW::fileImport(RS_Graphic& g, const QString& file, RS2::FormatT
         dwgR dwgr(QFile::encodeName(file));
         RS_DEBUG->print("RS_FilterDXFRW::fileImport: reading DWG file");
         if (RS_DEBUG->getLevel()== RS_Debug::D_DEBUGGING)
-            dwgr.setDebug(DRW::DEBUG);
+            dwgr.setDebug(DRW::DebugLevel::Debug);
         bool success = dwgr.read(this, true);
         RS_DEBUG->print("RS_FilterDXFRW::fileImport: reading DWG file: OK");
         RS_DIALOGFACTORY->commandMessage(QObject::tr("Opened dwg file version %1.").arg(printDwgVersion(dwgr.getVersion())));
@@ -183,6 +185,9 @@ bool RS_FilterDXFRW::fileImport(RS_Graphic& g, const QString& file, RS2::FormatT
         dxfRW dxfR(QFile::encodeName(file));
 
         RS_DEBUG->print("RS_FilterDXFRW::fileImport: reading file");
+        if (RS_Debug::D_DEBUGGING == RS_DEBUG->getLevel()) {
+            dxfR.setDebug(DRW::DebugLevel::Debug);
+        }
         bool success = dxfR.read(this, true);
         RS_DEBUG->print("RS_FilterDXFRW::fileImport: reading file: OK");
         //graphic->setAutoUpdateBorders(true);
@@ -633,11 +638,15 @@ void RS_FilterDXFRW::addSpline(const DRW_Spline* data) {
 		return;
 	}
 
-        RS_Spline* spline;
-        if (data->degree>=1 && data->degree<=3) {
+    RS_Spline* spline;
+    if (data->degree >= 1 && data->degree <= 3) {
         RS_SplineData d(data->degree, ((data->flags&0x1)==0x1));
-		if (data->knotslist.size())
-			d.knotslist = data->knotslist;
+        if (data->knotslist.size()) {
+            double tolknot {(0 >= data->tolknot) ? 1e-7 : data->tolknot};
+            for (auto const& k : data->knotslist) {
+                d.knotslist.push_back( RS_Math::round(k, tolknot));
+            }
+        }
         spline = new RS_Spline(currentContainer, d);
         setEntityAttributes(spline, data);
 
@@ -1298,8 +1307,7 @@ void RS_FilterDXFRW::addHeader(const DRW_Header* data){
         container = (RS_Graphic*)currentContainer;
     } else return;
 
-    map<std::string,DRW_Variant *>::const_iterator it;
-    for ( it=data->vars.begin() ; it != data->vars.end(); ++it ){
+    for (auto it = data->vars.begin() ; it != data->vars.end(); ++it ) {
         QString key = QString::fromStdString((*it).first);
         DRW_Variant *var = (*it).second;
         switch (var->type()) {

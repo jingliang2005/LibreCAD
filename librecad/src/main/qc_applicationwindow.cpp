@@ -191,11 +191,12 @@ QC_ApplicationWindow::QC_ApplicationWindow()
         font.setPointSize(fontsize);
         status_bar->setFont(font);
     }
-    if (allow_statusbar_height)
-    {
-        int height = settings.value("StatusbarHeight", 28).toInt();
-        status_bar->setMinimumHeight(height);
+    int height {64};
+    if (allow_statusbar_height) {
+        height = settings.value( "StatusbarHeight", 64).toInt();
     }
+    status_bar->setMinimumHeight( height);
+    status_bar->setMaximumHeight( height);
     settings.endGroup();
 
     RS_DEBUG->print("QC_ApplicationWindow::QC_ApplicationWindow: creating LC_CentralWidget");
@@ -483,8 +484,9 @@ bool QC_ApplicationWindow::doSave(QC_MDIWindow * w, bool forceSaveAs)
 			msg = tr("Saved drawing: %1").arg(name);
 			statusBar()->showMessage(msg, 2000);
 			commandWidget->appendHistory(msg);
-			if (!recentFiles->indexOf(name))
-				recentFiles->add(name);
+
+			if (recentFiles->indexOf(name) == -1) recentFiles->add(name);
+
 			w->setWindowTitle(format_filename_caption(name) + "[*]");
 			if (w->getGraphicView()->isDraftMode())
 				w->setWindowTitle(w->windowTitle() + " [" + tr("Draft Mode") + "]");
@@ -3064,26 +3066,6 @@ void QC_ApplicationWindow::relayAction(QAction* q_action)
         const QString title(q_action->text().remove("&"));
         commandWidget->appendHistory(title + " : " + commands);
     }
-}
-
-void QC_ApplicationWindow::invokeLinkList()
-{
-    // author: ravas
-
-    QDialog dlg;
-    dlg.setWindowTitle(tr("Help Links"));
-    auto layout = new QVBoxLayout;
-    auto list = new LinkList(&dlg);
-    list->addLink(QObject::tr("Wiki"), "https://dokuwiki.librecad.org/");
-    list->addLink(QObject::tr("User's Manual"), "https://librecad.readthedocs.io/");
-    list->addLink(QObject::tr("Commands"), "https://librecad.readthedocs.io/en/latest/ref/tools.html");
-    list->addLink(QObject::tr("Style Sheets"), "https://librecad.readthedocs.io/en/latest/ref/customize.html#style-sheets");
-    list->addLink(QObject::tr("Widgets"), "https://librecad.readthedocs.io/en/latest/ref/menu.html#widgets");
-    list->addLink(QObject::tr("Forum"), "https://forum.librecad.org/");
-    list->addLink(QObject::tr("Release Information"), "https://github.com/LibreCAD/LibreCAD/releases");
-    layout->addWidget(list);
-    dlg.setLayout(layout);
-    dlg.exec();
 }
 
 /**
