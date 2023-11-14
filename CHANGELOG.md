@@ -1,5 +1,21 @@
 # Change Log
 
+## [2.2.1-alpha] - unreleased
+
+### Added
+- shortcut "0" to specify coordinates "0,0" on command line
+- shortcut "." or "," to specify the current point coordinates on command line
+
+### Removed
+- importshp plugin, see issue #1481
+
+### Changed
+
+### Fixed
+- various issues in LFF font files
+- segfault with malformed LFF font files
+- CVE-2023-30259, OOB reads in importshp plugin (#1481)
+
 ## [2.2.0] - 2022-12-17
 
 ### Added

@@ -32,10 +32,15 @@
 #include "rs_dialogfactory.h"
 #include "rs_commandevent.h"
 #include "rs_coordinateevent.h"
-#include "rs_commands.h"
 #include "rs_math.h"
 #include "rs_snapper.h"
 #include "rs_debug.h"
+
+namespace {
+    bool notFinished(const RS_ActionInterface* action) {
+        return action != nullptr && !action->isFinished();
+    }
+}
 
 /**
  * Constructor.
@@ -84,7 +89,7 @@ void RS_EventHandler::back() {
  * Go enter pressed event for current action.
  */
 void RS_EventHandler::enter() {
-    QKeyEvent e(QEvent::KeyPress, Qt::Key_Enter, 0);
+    QKeyEvent e(QEvent::KeyPress, Qt::Key_Enter, {});
     keyPressEvent(&e);
 }
 
@@ -230,9 +235,28 @@ void RS_EventHandler::commandEvent(RS_CommandEvent* e) {
         if (!e->isAccepted()) {
 
             if(hasAction()){
-                // handle absolute cartesian coordinate input:
-                if (cmd.contains(',') && cmd.at(0)!='@') {
+                // handle quick shortcuts for absolute/current origins:
+                if (cmd.length() == 1) {
+                    RS_Vector at = relative_zero;
+                    switch (cmd[0].toLatin1()) {
+                        case '0':
+                            at.set(0,0);
+                            /* FALL THROUGH, to be replaced with c++17 [[fallthrough]] */
+                        case '.':
+                        case ',':
+                        {
+                            RS_CoordinateEvent ce(at);
+                            currentActions.last()->coordinateEvent(&ce);
+                            e->accept();
+                        }
+                            /* FALL THROUGH */
+                        default: /* NO OP */
+                            break;
+                    }
+                }
 
+                // handle absolute cartesian coordinate input:
+                if (!e->isAccepted() && cmd.contains(',') && cmd.at(0)!='@') {
                     int commaPos = cmd.indexOf(',');
                     RS_DEBUG->print("RS_EventHandler::commandEvent: 001");
                     bool ok1, ok2;
@@ -393,12 +417,12 @@ void RS_EventHandler::setDefaultAction(RS_ActionInterface* action) {
  */
 void RS_EventHandler::setCurrentAction(RS_ActionInterface* action) {
     RS_DEBUG->print("RS_EventHandler::setCurrentAction");
-    if (action==NULL) {
+    if (action==nullptr) {
         return;
     }
 
     // Predecessor of the new action or NULL:
-    RS_ActionInterface* predecessor = NULL;
+    RS_ActionInterface* predecessor = nullptr;
 
     // Suspend current action:
     if(hasAction()){
@@ -439,9 +463,9 @@ void RS_EventHandler::setCurrentAction(RS_ActionInterface* action) {
     RS_DEBUG->print("RS_EventHandler::setCurrentAction: init current action");
     action->init();
     // ## new:
-    if (action->isFinished()==false) {
+    if (!action->isFinished()) {
         RS_DEBUG->print("RS_EventHandler::setCurrentAction: show options");
-        currentActions.last()->showOptions();
+        action->showOptions();
         RS_DEBUG->print("RS_EventHandler::setCurrentAction: set predecessor");
         action->setPredecessor(predecessor);
     }
@@ -452,8 +476,10 @@ void RS_EventHandler::setCurrentAction(RS_ActionInterface* action) {
     RS_DEBUG->print("RS_EventHandler::setCurrentAction: debugging actions");
     debugActions();
     RS_DEBUG->print("RS_GraphicView::setCurrentAction: OK");
+    // For some actions: action->init() may call finish() within init()
+    // If so, the q_action shouldn't be checked
     if (q_action)
-        q_action->setChecked(true);
+        q_action->setChecked(hasAction());
 }
 
 
@@ -527,12 +553,7 @@ bool RS_EventHandler::isValid(RS_ActionInterface* action) const{
  */
 bool RS_EventHandler::hasAction()
 {
-    foreach (RS_ActionInterface* a, currentActions)
-    {
-        if(!a->isFinished())
-            return true;
-    }
-    return false;
+    return std::any_of(currentActions.begin(), currentActions.end(), notFinished);
 }
 
 

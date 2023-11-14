@@ -23,29 +23,28 @@
 ** This copyright notice MUST APPEAR in all copies of the script!
 **
 **********************************************************************/
-#include <iostream>
 #include <cmath>
-#include <memory>
+#include <iostream>
+
 #include <QPainterPath>
 #include <QBrush>
 #include <QString>
+
 #include "rs_hatch.h"
+
+#include "lc_looputils.h"
 
 #include "rs_arc.h"
 #include "rs_circle.h"
 #include "rs_ellipse.h"
 #include "rs_line.h"
 #include "rs_graphicview.h"
-#include "rs_dialogfactory.h"
-#include "rs_infoarea.h"
-
 #include "rs_information.h"
 #include "rs_painter.h"
 #include "rs_pattern.h"
 #include "rs_patternlist.h"
 #include "rs_math.h"
 #include "rs_debug.h"
-
 
 RS_HatchData::RS_HatchData(bool _solid,
 						   double _scale,
@@ -690,17 +689,46 @@ void RS_Hatch::draw(RS_Painter* painter, RS_GraphicView* view, double& /*pattern
     painter->setPen(pen);
 }
 
+namespace
+{
+void pr(RS_EntityContainer* loop)
+{
+    if (loop == nullptr)
+    {
+        std::cout<<"-nullptr-;"<<std::endl;
+        return;
+    }
+    std::cout<<"( id="<<loop->getId()<<"| ";
+    for (auto* e: *loop) {
+        if (e&& e->rtti() == RS2::EntityContainer)
+        {
+            pr(static_cast<RS_EntityContainer*>(e));
+        } else if (e) {
+            std::cout<<", "<<e->getId();
+        }
+    }
+    std::cout<<" |"<<loop->getId()<<" )"<<std::endl;
+}
+}
 //must be called after update()
 double RS_Hatch::getTotalArea() {
+    auto loops = getLoops();
+    std::cout<<"loops.size()="<<loops.size()<<std::endl;
+    for (auto& l: loops)
+    {
+        std::cout<<l->getId()<<": "<<l->rtti()<<std::endl;
+        pr(l.get());
+    }
+    std::cout<<"loops: done"<<std::endl;
+
+    LC_LoopUtils::LoopSorter loopSorter(std::move(loops));
+    auto sorted = loopSorter.getResults();
 
     double totalArea=0.;
 
     // loops:
-	for(auto l: entities){
-
-        if (l!=hatch && l->rtti()==RS2::EntityContainer) {
-            totalArea += l->areaLineIntegral();
-        }
+    for(auto* loop: sorted){
+        totalArea += loop->areaLineIntegral();
     }
     return totalArea;
 }
@@ -777,7 +805,6 @@ void RS_Hatch::stretch(const RS_Vector& firstCorner,
     RS_EntityContainer::stretch(firstCorner, secondCorner, offset);
     update();
 }
-
 
 /**
  * Dumps the point's data to stdout.

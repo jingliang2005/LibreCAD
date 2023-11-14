@@ -9,6 +9,7 @@
     </message>
 </context>
 <context>
+<<<<<<< HEAD
     <name>CAMProfileDataModel</name>
     <message>
         <source>Name</source>
@@ -224,6 +225,8 @@
     </message>
 </context>
 <context>
+=======
+>>>>>>> master
     <name>LC_Align</name>
     <message>
         <source>Align</source>
@@ -244,6 +247,36 @@
     <message>
         <source>second target point:</source>
         <translation>otrais mērķa punkts:</translation>
+    </message>
+    <message>
+        <source>Align settings...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keep original objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify base points first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Align Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click on options to set/unset,
+Ok to accept and start alignment.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If &apos;Keep original objects&apos; is checked,
+Align will copy rather than move the selected objects.
+
+If &apos;Specify base points first&apos; is checked,
+Align will prompt for the alignment points in the order
+first base, second base, first target, second target.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -423,10 +456,6 @@
     <message>
         <source>Vertices</source>
         <translation>Virsotnes</translation>
-    </message>
-    <message>
-        <source>curvature</source>
-        <translation type="obsolete">izliekums</translation>
     </message>
     <message>
         <source>IMAGE</source>
@@ -670,141 +699,6 @@
     </message>
 </context>
 <context>
-    <name>dibSHP</name>
-    <message>
-        <source>File...</source>
-        <translation>Datne...</translation>
-    </message>
-    <message>
-        <source>File type:</source>
-        <translation>Datnes tips:</translation>
-    </message>
-    <message>
-        <source>Layer</source>
-        <translation>Slānis</translation>
-    </message>
-    <message>
-        <source>Import ESRI Shapefile</source>
-        <translation>Importēt ESRI figūru datni</translation>
-    </message>
-    <message>
-        <source>Unknown</source>
-        <translation>Nezināms</translation>
-    </message>
-    <message>
-        <source>Current</source>
-        <translation>Pašreizējais</translation>
-    </message>
-    <message>
-        <source>From data:</source>
-        <translation>No datiem:</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation>Krāsa</translation>
-    </message>
-    <message>
-        <source>Line type</source>
-        <translation>Līnijas tips</translation>
-    </message>
-    <message>
-        <source>Width</source>
-        <translation>Platums</translation>
-    </message>
-    <message>
-        <source>Point</source>
-        <translation>Punkts</translation>
-    </message>
-    <message>
-        <source>as Point</source>
-        <translation>kā punkts</translation>
-    </message>
-    <message>
-        <source>as Label:</source>
-        <translation>kā etiķete:</translation>
-    </message>
-    <message>
-        <source>Accept</source>
-        <translation>Pieņemt</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>Atcelt</translation>
-    </message>
-    <message>
-        <source>Select file</source>
-        <translation>Izvēlieties datni</translation>
-    </message>
-    <message>
-        <source>Point+Measure</source>
-        <translation>Punkts + mērs</translation>
-    </message>
-    <message>
-        <source>3D Point</source>
-        <translation>3D punkts</translation>
-    </message>
-    <message>
-        <source>Multi Point</source>
-        <translation>Vairāki punkti</translation>
-    </message>
-    <message>
-        <source>Multi Point+Measure</source>
-        <translation>Vairāki punkti + mērs</translation>
-    </message>
-    <message>
-        <source>3D Multi Point</source>
-        <translation>3D vairāki punkti</translation>
-    </message>
-    <message>
-        <source>Arc</source>
-        <translation>Loks</translation>
-    </message>
-    <message>
-        <source>Arc+Measure</source>
-        <translation>Loks + mērs</translation>
-    </message>
-    <message>
-        <source>3D Arc</source>
-        <translation>3D loks</translation>
-    </message>
-    <message>
-        <source>Poligon</source>
-        <translation type="obsolete">Daudzstūris</translation>
-    </message>
-    <message>
-        <source>Poligon+Measure</source>
-        <translation type="obsolete">Daudzstūris + mērs</translation>
-    </message>
-    <message>
-        <source>3D Poligon</source>
-        <translation type="obsolete">3D daudzstūris</translation>
-    </message>
-    <message>
-        <source>Multipatch</source>
-        <translation>Vairāku posmu</translation>
-    </message>
-    <message>
-        <source>The file %1 not have extension .shp</source>
-        <translation>Datnei %1 nav paplašinājuma .shp</translation>
-    </message>
-    <message>
-        <source>The file %1 not exist</source>
-        <translation>Datne %1 neeksistē</translation>
-    </message>
-    <message>
-        <source>Polygon</source>
-        <translation>Daudzstūris</translation>
-    </message>
-    <message>
-        <source>Polygon+Measure</source>
-        <translation>Daudzstūris + mērs</translation>
-    </message>
-    <message>
-        <source>3D Polygon</source>
-        <translation>3D daudzstūris</translation>
-    </message>
-</context>
-<context>
     <name>divide</name>
     <message>
         <source>Divide</source>
@@ -1017,8 +911,223 @@ anti-clockwise.</source>
     </message>
 </context>
 <context>
+    <name>divide</name>
+    <message>
+<<<<<<< HEAD
+        <source>Divide</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select a line, circle or arc and press return</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>n</source>
+        <translation type="unfinished">n</translation>
+    </message>
+    <message>
+        <source>Empty Entity</source>
+        <translation type="unfinished">Tukšs objekts</translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="unfinished">X</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="unfinished">
+            </translation>
+    </message>
+    <message>
+        <source>Layer</source>
+        <translation type="unfinished">Slānis</translation>
+    </message>
+    <message>
+        <source>Color</source>
+        <translation type="unfinished">Krāsa</translation>
+    </message>
+    <message>
+        <source>Line type</source>
+        <translation type="unfinished">Līnijas tips</translation>
+    </message>
+    <message>
+        <source>Line thickness</source>
+        <translation type="unfinished">Līnijas biezums</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation type="unfinished">ID</translation>
+    </message>
+    <message>
+        <source>LINE</source>
+        <translation type="unfinished">LĪNIJA</translation>
+    </message>
+    <message>
+        <source>from point</source>
+        <translation type="unfinished">no punkta</translation>
+    </message>
+    <message>
+        <source>to point</source>
+        <translation type="unfinished">uz punktu</translation>
+    </message>
+    <message>
+        <source>length</source>
+        <translation type="unfinished">garums</translation>
+    </message>
+    <message>
+        <source>Angle in XY plane</source>
+        <translation type="unfinished">Leņķis XY plaknē</translation>
+    </message>
+    <message>
+        <source>Inc.</source>
+        <translation type="unfinished">SIA</translation>
+    </message>
+    <message>
+        <source>ARC</source>
+        <translation type="unfinished">LOKS</translation>
+    </message>
+    <message>
+        <source>center point</source>
+        <translation type="unfinished">centra punkts</translation>
+    </message>
+    <message>
+        <source>radius</source>
+        <translation type="unfinished">rādiuss</translation>
+    </message>
+    <message>
+        <source>initial angle</source>
+        <translation type="unfinished">sākotnējais leņķis</translation>
+    </message>
+    <message>
+        <source>final angle</source>
+        <translation type="unfinished">beigu leņķis</translation>
+    </message>
+    <message>
+        <source>CIRCLE</source>
+        <translation type="unfinished">RIŅĶIS</translation>
+    </message>
+    <message>
+        <source>circumference</source>
+        <translation type="unfinished">perimetrs</translation>
+    </message>
+    <message>
+        <source>area</source>
+        <translation type="unfinished">laukums</translation>
+    </message>
+    <message>
+        <source>POLYLINE</source>
+        <translation type="unfinished">LAUZTALĪNIJA</translation>
+    </message>
+    <message>
+        <source>Closed</source>
+        <translation type="unfinished">Aizvērts</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished">Nē</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation type="unfinished">Jā</translation>
+    </message>
+    <message>
+        <source>Vertices</source>
+        <translation type="unfinished">Virsotnes</translation>
+    </message>
+    <message>
+        <source>in point</source>
+        <translation type="unfinished">punktā</translation>
+    </message>
+    <message>
+        <source>MUST be a line, circle or arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>dividedlg</name>
+    <message>
+        <source>Divide - </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Atcelt</translation>
+    </message>
+    <message>
+        <source>Divide at</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>places</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ticks - Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Breaks - Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;i&gt;New&lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enter start
+angle, in
+decimal degrees
+0° at 3 o&apos;clock
+goes
+anti-clockwise.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;i&gt;&quot;New&quot;&lt;/i&gt;&lt;br&gt;Enter name&lt;br&gt;for a new layer&lt;br&gt;(if required?) to&lt;br&gt;draw ticks on.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ticks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Above</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Below</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outside</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>lc_Geardlg</name>
     <message>
+=======
+>>>>>>> master
         <source>Number of teeth</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1245,10 +1354,6 @@ anti-clockwise.</source>
         <source>Plot plugin</source>
         <translation>Grafiku spraudnis</translation>
     </message>
-    <message>
-        <source>Draw</source>
-        <translation type="obsolete">Zīmēt</translation>
-    </message>
 </context>
 <context>
     <name>plotDialog</name>
@@ -1324,10 +1429,6 @@ Izmantojiet savos vienādojums t vai x kā mainīgos/parametrus.
     <message>
         <source>Style:</source>
         <translation>Stils:</translation>
-    </message>
-    <message>
-        <source>Heigth:</source>
-        <translation type="obsolete">Augstums:</translation>
     </message>
     <message>
         <source>Separation</source>
